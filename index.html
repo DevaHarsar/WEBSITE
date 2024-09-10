@@ -3,12 +3,234 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>PORTFOLIO</title>
     <style>
+        * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+
+    body {
+        /* height: 100vh; */
+        width: 100vw;
+       /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        border: 1px solid rgb(111, 238, 120);
+
+        align-items: center;
+    }
+
+
+    .section1 {
+        width: 70%;
+        height: 12rem;
+        /* background-color: rgb(104, 228, 145); */
+        background: #ff00cc;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #333399, #ff00cc);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #333399, #ff00cc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .profile-img-section {
+        width: 40%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .profile-data {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        color: whitesmoke;
+    }
+
+
+    .profile-img {
+        height: 8rem;
+        width: 8rem;
+        border-radius: 50%;
+    }
+
+
+    .section2 {
+        width: 70%;
+        height: 8rem;
+        /* background-color: aquamarine; */
+       
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        /* padding: 10px; */
+    }
+
+
+    .section3 {
+        width: 70%;
+        height: 18rem;
+        /* background-color: aquamarine; */
+      
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        /* padding: 10px; */
+    }
+
+
+    .section4 {
+        width: 70%;
+        height: 10rem;
+        /* background-color: aquamarine; */
+       
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        /* padding: 10px; */
+    }
+    .section5 {
+        width: 70%;
+        height: 10rem;
+        /* background-color: aquamarine; */
         
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        /* padding: 10px; */
+    }
+
+
+    .section-title {
+        /* height: 10%; */
+        color: #3494e6;
+        font-weight: bold;
+        padding: 20px;
+    }
+
+
+    .ed-table {
+        width: 100%;
+        border: 1px solid white;
+        border-collapse: collapse;
+        margin-bottom: 20px; margin-bottom: 20px;
+        background: #E0EAFC;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #CFDEF3, #E0EAFC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+box-shadow:
+  4.5px 4.5px 3.6px rgba(0, 0, 0, 0.49),
+  12.5px 12.5px 10px rgba(0, 0, 0, 0.262),
+  30.1px 30.1px 24.1px rgba(0, 0, 0, 0.18),
+  100px 100px 80px rgba(0, 0, 0, 0.137)
+;
+        
+    }
+
+
+    th
+    {
+        padding: 1rem;
+        border: 1px solid rgb(59, 59, 59);
+        justify-content: center;
+    }
+    td {
+        padding: 1rem;
+        border: 1px solid blue;
+        justify-content: center;
+
+       
+        
+    }
+
+
+    .companies {
+        font-weight: bold;
+
+
+        color:rgb(112, 242, 160);
+    }
+    span 
+    {
+        color: darkmagenta;
+    }
     </style>
 </head>
 <body>
-    Hii
+    <div class="head1"></div>
+    <div class="section1">
+        <div class="profile-img-section">
+            <img src="https://pinnacle.works/wp-content/uploads/2022/06/dummy-image.jpg" alt="Deadpool" class="profile-img">
+            
+        </div>
+
+        <div class="profile-data">
+            <h1> DEVA HARSAR</h1>
+            <h3> devaharsar@gmail.com</h3>
+        </div>
+    </div>
+    <div class="section2">
+    <h1 class="section-title">
+        Objectives
+    </h1>
+    <p> I am junior java Developer and currently pursuing engineering in siet</p></div>
+
+    <div class="section3">
+        <h1 class="section-title">Education</h1>
+        <table class="ed-table">
+            <tr>
+                <th>Degree</th>
+                <th>Campus</th>
+                <th>CGPA</th>
+            </tr>
+            <tr>
+                <td>BE CSE</td>
+                <td>SIET</td>
+                <td>8.78</td>
+            </tr>
+            <tr>
+                <td>BE ECE</td>
+                <td>SIET</td>
+                <td>8.10</td>
+            </tr>
+            <tr>
+                <td>BE CSE</td>
+                <td>SIET</td>
+                <td>9.78</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section4">
+        <h1 class="section-title">
+            Internship
+        </h1>
+        <p><span>Codsoft</span>Done a one month internship as java developer</p>
+        
+    </div>
+    <div class="section5">
+    <h1 class="section-title">
+        COMPANIES
+    </h1>
+    
+    <p><span>FLUTTER Developer </span>Freelancing project on flutter</p>
+</div>
 </body>
 </html>
