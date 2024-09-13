@@ -6,56 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+       
         body {
             background-color: #f5f5f5;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
+            height: 100vh;
             width: 100%;
-
-
-            overflow: auto;
+            overflow: hidden;
+            
         }
-
+      
         /* From Uiverse.io by xueyuantan */
         button {
             width: 10em;
             height: 3em;
-            
+
             font-size: 15px;
             font-family: inherit;
             border: none;
-            position: relative;
+            margin-bottom: 2rem;
+            /* position: absolute ;
+            padding-top: 100px; */
             overflow: hidden;
             z-index: 1;
-           
+
         }
 
-        button::before {
-            content: '';
-            width: 0;
-            height: 3em;
-            
-            position: absolute;
-            top: 0;
-            left: 0;
-            background-image: linear-gradient(to right, #62856ae3 0%, #ebe347a7 100%);
-            transition: .5s ease;
-            display: block;
-            z-index: -2;
-        }
-
-        button:hover::before {
-            width: 10em;
-        }
+       button:hover{
+           background-color: beige;
+       }
 
         .forms {
             display: flex;
             flex-direction: column;
-            /* justify-content: center; */
+            justify-content: center;
             align-items: center;
-            width: 50rem;
-            gap: 1rem;
+            width: 35rem;
+            height: 29rem;
+            gap: 15px;
             color: rgb(30, 253, 253);
             background: rgba(105, 11, 187, 0.44);
             box-shadow: 0 8px 32px 0 rgba(77, 77, 184, 0.37);
@@ -63,21 +54,31 @@
             -webkit-backdrop-filter: blur(7.5px);
             border-radius: 10px;
             border: 1px solid rgba(255, 255, 255, 0.18);
-            justify-content: center;
-        }
-        input{
-            border: none;
-            border-radius: 1rem;
-            background-color:rgb(219, 223, 223) ;
-            width: 18rem;
-            height: 3rem;
             
         }
-        
+
+        input {
+            border: none;
+            
+            border-radius: 1rem;
+            background-color: rgb(219, 223, 223);
+            width: 18rem;
+            height: 3rem;
+
+        }
+        input:focus{
+            outline: none;
+            border-bottom:3px solid rgb(85, 112, 217);
+        }
+
 
         h1 {
             color: brown;
-           
+            
+        }
+        .headingdesign
+        {
+            background-color: aliceblue;
         }
 
         h3 {
@@ -90,9 +91,9 @@
 <body>
     <div class="container">
 
-
-        <form action="" class="forms" >
-            <h1>FORM</h1>
+        <form action="" class="forms">
+            <h1 class="headingdesign">FORM</h1>
+           
             <h3>Enter Name</h3>
             <input type="text" id="name" placeholder="Enter Name">
             <h3>Enter Email Id</h3>
@@ -104,22 +105,39 @@
             <h3>Enter Password</h3>
             <input type="password" id="password" placeholder="password">
             <br>
-            <button type="submit" onclick="formdata()" >Submit the form</button>
+            <button type="submit" onclick="formdata()">Submit the form</button>
         </form>
     </div>
     <script>
         function formdata() {
             //  e.preventDefault();
-            let val=document.getElementById("name").value ;  
-            let email=document.getElementById("email").value;
-            let phone=document.getElementById("phone").value;
+            let val = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let phone = document.getElementById("phone").value;
+            const data =
+            {
+                valtype:val,
+                emailtype:email,
+            }
+             const {valtype,emailtype}=data
+             if(valtype!=='') 
+             {
+                console.log('Hurray');
 
-            
-           console.log(val);
-           console.log(email);
-           console.log(phone);
+             }
+             else{
+                console.log("Enter a name");
+             }
+            if (val === 'Dev' || email === 'a@a.com') {
+                       console.log("username/email exist");
+            }
+            else{
+            console.log(val);
+            console.log(email);
+            console.log(phone);
+            }
         }
-       
+
     </script>
 </body>
 
