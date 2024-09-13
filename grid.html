@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+   
+    <style>
+        .container {
+            height: 100vh;
+            width: 100wh;
+            display: grid;
+            grid-template-columns: 30% 30% 30%;
+            grid-template-columns: 30% 30% 30%;
+
+
+        }
+        @keyframes function {
+            0%{
+                transform: translateX(-500%);
+                scale: 10%;
+            }
+
+            30% {
+                transform: translatex(30%);
+                scale: 10%;
+            }
+            60%
+            {
+                rotate: 60deg;
+                scale:20%;
+            }
+            100%{
+                
+                  transform: rotate(50%);
+                  scale: 30%;
+            }
+
+        }
+        .boxes1 {
+            grid-row: 1/2;
+            grid-column: 3/4;
+            animation:2s function ease-in;
+        }
+        .boxes2:hover{
+            background-color: gray;
+            transition: 2s background-color ease-in;
+        }
+
+        .boxes4 {
+            grid-row: 3/4;
+            grid-column: 3/-2;
+            animation:2s function ease-in;
+        }
+        .boxes2
+        {
+            animation:2s function ease-in;
+        }
+
+       
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="boxes1">o</div>
+        <div class="boxes2">b</div>
+        <div class="boxes3">r</div>
+        <div class="boxes4">g</div>
+    </div>
+   
+</body>
+
+</html>
