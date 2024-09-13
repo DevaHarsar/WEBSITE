@@ -11,42 +11,42 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 80rem;
+            width: 100%;
+
 
             overflow: auto;
         }
 
         /* From Uiverse.io by xueyuantan */
         button {
-            width: 9em;
+            width: 10em;
             height: 3em;
-            border-radius: 30em;
+            
             font-size: 15px;
             font-family: inherit;
             border: none;
             position: relative;
             overflow: hidden;
             z-index: 1;
-            box-shadow: 6px 6px 12px #c5c5c5,
-                -6px -6px 12px #ffffff;
+           
         }
 
         button::before {
             content: '';
             width: 0;
             height: 3em;
-            border-radius: 30em;
+            
             position: absolute;
             top: 0;
             left: 0;
             background-image: linear-gradient(to right, #62856ae3 0%, #ebe347a7 100%);
             transition: .5s ease;
             display: block;
-            z-index: -1;
+            z-index: -2;
         }
 
         button:hover::before {
-            width: 9em;
+            width: 10em;
         }
 
         .forms {
@@ -55,23 +55,34 @@
             /* justify-content: center; */
             align-items: center;
             width: 50rem;
-
-            color: darkslategray;
-            background: white;
-            box-shadow: 0 8px 32px 0 rgba(230, 230, 235, 0.37);
+            gap: 1rem;
+            color: rgb(30, 253, 253);
+            background: rgba(105, 11, 187, 0.44);
+            box-shadow: 0 8px 32px 0 rgba(77, 77, 184, 0.37);
             backdrop-filter: blur(7.5px);
             -webkit-backdrop-filter: blur(7.5px);
             border-radius: 10px;
             border: 1px solid rgba(255, 255, 255, 0.18);
             justify-content: center;
         }
+        input{
+            border: none;
+            border-radius: 1rem;
+            background-color:rgb(219, 223, 223) ;
+            width: 18rem;
+            height: 3rem;
+            
+        }
+        
 
         h1 {
             color: brown;
+           
         }
 
         h3 {
             text-align: left;
+            display: none;
         }
     </style>
 </head>
@@ -80,27 +91,33 @@
     <div class="container">
 
 
-        <form action="" class="forms" onsubmit="formdata()">
+        <form action="" class="forms" >
             <h1>FORM</h1>
             <h3>Enter Name</h3>
             <input type="text" id="name" placeholder="Enter Name">
             <h3>Enter Email Id</h3>
             <input type="email" id="email" placeholder="Enter mail">
+            <h3>Age</h3>
+            <input type="number" id="age" placeholder="Enter age">
             <h3>Enter Phone Number</h3>
-            <input type="tel" id="phone" placeholder="Enter phone number">
+            <input type="number" id="phone" placeholder="Enter phone number">
             <h3>Enter Password</h3>
             <input type="password" id="password" placeholder="password">
             <br>
-            <button onclick="formdata()" type="submit">Submit the form</button>
+            <button type="submit" onclick="formdata()" >Submit the form</button>
         </form>
     </div>
     <script>
         function formdata() {
-           
+            //  e.preventDefault();
             let val=document.getElementById("name").value ;  
             let email=document.getElementById("email").value;
             let phone=document.getElementById("phone").value;
-           alert(val);
+
+            
+           console.log(val);
+           console.log(email);
+           console.log(phone);
         }
        
     </script>
