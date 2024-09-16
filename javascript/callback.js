@@ -40,19 +40,20 @@ trigger();
 async function api() {
     try {
         const respond = await fetch("https://66e526e65cc7f9b6273c6bc8.mockapi.io/register")
-        const data =await  respond.json()
+        const data = await respond.json()
         // console.table(data)
         return data
     } catch (error) {
         console.log(error)
     }
-   
+
 }
-async function APIdata()
-{
-    const val=await api()
+async function APIdata() {
+    const val = await api()
     // console.log(val);
-    const struct=val.map((data)=> {console.log(data)})
-    console.log(struct[0])
+    const activeuser = val.filter(users => users.name==="Fred Romaguera")
+    // const struct = val.map((data) => { console.log(data) })
+    // console.log(struct)
+    console.log(activeuser)
 }
 APIdata()
